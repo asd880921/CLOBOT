@@ -8,28 +8,16 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
-		message.react('841661109868953651');
+	message.react('841661109868953651');
         message.react('841661110440034334');
         message.react('841662235410432011');
-	}
-});
-client.on('message', message => {
-	if (message.content === '!查詢') {
-        message.react('841662779436957697');
+	message.react('841662779436957697');
         message.react('841663111878017084');
         message.react('841663779212230657');
-	}
-});
-client.on('message', message => {
-	if (message.content === '!查詢') {
-        message.react('841662530849472542');
+	message.react('841662530849472542');
         message.react('841663477433106442');
         message.react('841663297571913748');
-	}
-});
-client.on('message', message => {
-	if (message.content === '!查詢') {
-        message.react('841662438449741897');
+	message.react('841662438449741897');
         message.react('841662339409641552');
         message.react('841663979914526761');
 	}
