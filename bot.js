@@ -21,8 +21,11 @@ client.on('message', message => {
 	if (message.content === '!查詢') {
         for (var i = 0; i < length; i++) {
         message.react(CLO_Emoji[i]);
-}
-	}
+}}
+
+if (!message.content.startsWith("機器人"))
+message.channel.send('嗶嗶逼')
+
 })
 
 
