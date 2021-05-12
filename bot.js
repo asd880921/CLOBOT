@@ -1,4 +1,4 @@
-const {Client, RichEmbed, Message, DiscordAPIError} = require('discord.js') ;
+const {Client, RichEmbed, Message} = require('discord.js') ;
 const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
