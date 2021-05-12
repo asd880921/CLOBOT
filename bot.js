@@ -23,18 +23,29 @@ client.on('message', message => {
         message.react(CLO_Emoji[i]);
 }}
 
-if (message.content.startsWith("機器人"))
+if (message.content.startsWith(+"機器人"))
 message.channel.send('嗶嗶逼')
 
 })
 
-
+client.on('message', message => {
+	if (message.content === '!刪除') {
+message.channel.messages.fetch({
+    limit: 5 // Change `100` to however many messages you want to fetch
+}).then((messages) => { 
+    const botMessages = [];
+    messages.filter(m => m.author.id === '841613698908684308').forEach(msg => botMessages.push(msg))
+    message.channel.bulkDelete(botMessages).then(() => {
+        message.channel.send("Cleared bot messages").then(msg => msg.delete({
+            timeout: 3000
+        }))
+    });
+})
+}}
 
 client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
     const { message, emoji } = messageReaction;
-
-        message.channel.delete()
 
     if(emoji.id === "841661109868953651")
     message.channel.send('[영롱한 주얼 컴포넌트]');
