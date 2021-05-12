@@ -41,7 +41,8 @@ message.channel.messages.fetch({
         }))
     });
 })
-}}
+}
+}
 
 client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
