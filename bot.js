@@ -1,5 +1,6 @@
 const {RichEmbed, Message, DiscordAPIError} = require('discord.js') ;
 const Discord = require('discord.js');
+var clent='';
 
 let CLO_embed = new Discord.MessageEmbed()
 .setTitle("[點選Emoji就能修改下方的文字視窗哦]")
