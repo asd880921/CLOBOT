@@ -1,9 +1,9 @@
-const {Client, RichEmbed, Message} = require('discord.js') ;
-const Discord = require('discord.js');
+const {Client, RichEmbed, Discord} = require('discord.js') ;
+const Discordd = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
 
-let CLO_embed = new Discord.MessageEmbed()
+let CLO_embed = new Discordd.MessageEmbed()
 .setTitle("[點選Emoji就能修改下方的文字視窗哦]")
 .setURL("https://closers.nexon.com/Main/Index")
 .setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
