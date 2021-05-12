@@ -10,7 +10,7 @@ var CLO_Emoji=[
 var length = CLO_Emoji.length;
     
 client.on('ready', () => {
-    console.log(`${client.user.tag} 準備好上戰場惹！`);
+    console.log(`${client.user.tag} 準備好上戰場惹！～`);
 });
 
 client.on('message', message => {
