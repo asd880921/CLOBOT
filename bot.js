@@ -17,73 +17,64 @@ client.on('ready', () => {
     console.log(`${client.user.tag} 準備好上戰場惹！～`);
 });
 
+
 client.on('message', message => {
 	if (message.content === '!查詢') {
+        message.delete(1)
+        message.channel.send('[道具翻譯列表-道具名稱會顯示在這邊哦]')
+    }
+    if(message.content === '[道具翻譯列表-道具名稱會顯示在這邊哦]' && message.author.bot){
         for (var i = 0; i < length; i++) {
         message.react(CLO_Emoji[i]);
-}}
-
-if (message.content.startsWith(+"機器人"))
-message.channel.send('嗶嗶逼')
-
+        }
+    }
 })
 
-client.on('message', message => {
-	if (message.content === '!刪除') {
-message.channel.messages.fetch({
-    limit: 5 // Change `100` to however many messages you want to fetch
-}).then((messages) => { 
-    const botMessages = [];
-    messages.filter(m => m.author.id === '841613698908684308').forEach(msg => botMessages.push(msg))
-    message.channel.bulkDelete(botMessages).then(() => {
-        message.channel.send("Cleared bot messages").then(msg => msg.delete({
-            timeout: 3000
-        }))
-    });
-})
-}
-}
 
 client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
-    const { message, emoji } = messageReaction;
 
-    if(emoji.id === "841661109868953651")
-    message.channel.send('[영롱한 주얼 컴포넌트]');
+    const { message, emoji} = messageReaction;
+    message.edit('Loading...');
 
-    if(emoji.id === "841661110440034334") 
-    message.channel.send('[초월의 비약]');
-
-    if(emoji.id === "841662779436957697") 
-    message.channel.send('[일반 D 컴포넌트 : 기어]');
-
-    if(emoji.id === "841663111878017084") 
-    message.channel.send('[일반 D 컴포넌트 : 코스튬]');
-
-    if(emoji.id === "841663779212230657") 
-    message.channel.send('[품질 보증 씰]');
-
-    if(emoji.id === "841662235410432011") 
-    message.channel.send('[슬롯 타입 변경툴]');
-
-    if(emoji.id === "841663477433106442") 
-    message.channel.send('[리얼 플래티넘 드라이버]');
-
-    if(emoji.id === "841662530849472542") 
-    message.channel.send('[일반 강화기 연료]');
-
-    if(emoji.id === "841663297571913748") 
-    message.channel.send('[완벽한 PNA 진화 키트]');
-
-    if(emoji.id === "841662438449741897") 
-    message.channel.send('[유니온 기어 윤활제]');
-
-    if(emoji.id === "841662339409641552") 
-    message.channel.send('[알파 이퀄라이저(Lv.81~90)]');
-
-    if(emoji.id === "841663979914526761") 
-    message.channel.send('[유니온 네임택]');
-
-    });
+    switch(emoji.id){
+        case '841661109868953651':
+            message.edit('[영롱한 주얼 컴포넌트]');
+            break;
+        case '841661110440034334':
+            message.edit('[초월의 비약]');
+            break;
+        case '841662779436957697':
+            message.edit('[일반 D 컴포넌트 : 기어]');
+            break;
+        case '841663111878017084':
+            message.edit('[일반 D 컴포넌트 : 코스튬]');
+            break;
+        case '841663779212230657':
+            message.edit('[품질 보증 씰]');
+            break;
+        case '841662235410432011':
+            message.edit('[슬롯 타입 변경툴]');
+            break;
+        case '841663477433106442':
+            message.edit('[리얼 플래티넘 드라이버]');
+            break;
+        case '841662530849472542':
+            message.edit('[일반 강화기 연료]');
+            break;
+        case '841663297571913748':
+            message.edit('[완벽한 PNA 진화 키트]');
+            break;
+        case '841662438449741897':
+            message.edit('[유니온 기어 윤활제]');
+            break;
+        case '841662339409641552':
+            message.edit('[알파 이퀄라이저(Lv.81~90)]');
+            break;
+        case '841663979914526761':
+            message.edit('[유니온 네임택]');
+            break;     
+    }
+});
 
 client.login(process.env.BOT_TOKEN) ;
