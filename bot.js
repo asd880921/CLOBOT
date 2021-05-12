@@ -2,7 +2,7 @@ const {Client, RichEmbed, Discord} = require('discord.js') ;
 const client = new Client ;
 const {token} = require('./settings.json') ;
 
-const Emojis_ = client.emojis.find("name", "111");
+var bean = message.guild.emojis.cache.find(emoji => emoji.name == '111');
 
 var CLO_Emoji=[
 '841661109868953651','841661110440034334',
@@ -29,7 +29,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 	if (message.content === '!查詢CLO') {
-message.react(Emojis_.id);
+message.react(bean.id);
 	}
 });
 
