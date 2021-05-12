@@ -31,7 +31,9 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
     const { message, emoji } = messageReaction;
 
-    message.delete()
+    if(message.author.id == "841613698908684308"){
+        message.delete()
+    }
 
     if(emoji.id === "841661109868953651")
     message.channel.send('[영롱한 주얼 컴포넌트]');
