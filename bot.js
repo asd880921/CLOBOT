@@ -2,6 +2,8 @@ const {Client, RichEmbed, Discord} = require('discord.js') ;
 const client = new Client ;
 const {token} = require('./settings.json') ;
 
+const Emojis_ = client.emojis.find("name", "111");
+
 var CLO_Emoji=[
 '841661109868953651','841661110440034334',
 '841662235410432011','841662779436957697',
@@ -18,7 +20,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	if (message.content === '!查詢CLO') {
+	if (message.content === '!查詢') {
         for (var i = 0; i < length; i++) {
         message.react(CLO_Emoji[i]);
 }
@@ -26,19 +28,8 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-	if (message.content === '!查詢') {
-	message.react('841661109868953651');
-        message.react('841661110440034334');
-        message.react('841662235410432011');
-	message.react('841662779436957697');
-        message.react('841663111878017084');
-        message.react('841663779212230657');
-	message.react('841662530849472542');
-        message.react('841663477433106442');
-        message.react('841663297571913748');
-	message.react('841662438449741897');
-        message.react('841662339409641552');
-        message.react('841663979914526761');
+	if (message.content === '!查詢CLO') {
+message.react(Emojis_.id);
 	}
 });
 
