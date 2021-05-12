@@ -35,7 +35,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
 
     const { message, emoji} = messageReaction;
-    message.edit('Loading...');
+    message.edit('加載中Loading...');
 
     switch(emoji.id){
         case '841661109868953651':
