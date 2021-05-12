@@ -19,7 +19,9 @@ client.on('ready', () => {
 
 client.on('message',msg=>{
 	if(msg.content.startsWith('羽櫻好醜')){
-		msg.react('841661109868953651');
+		msg.react('802478923073585212');
+		msg.react('802488806192185373');
+		msg.react('802478922641571850');
 	}
 }) ;
 
