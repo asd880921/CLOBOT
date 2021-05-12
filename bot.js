@@ -23,7 +23,7 @@ client.on('message', message => {
         message.react(CLO_Emoji[i]);
 }}
 
-if (!message.content.startsWith("機器人"))
+if (message.content.startsWith("機器人"))
 message.channel.send('嗶嗶逼')
 
 })
