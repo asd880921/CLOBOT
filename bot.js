@@ -2,8 +2,6 @@ const {Client, RichEmbed, Discord} = require('discord.js') ;
 const client = new Client ;
 const {token} = require('./settings.json') ;
 
-var bean = client.emojis.find("name", "111")
-
 var CLO_Emoji=[
 '841661109868953651','841661110440034334',
 '841662235410432011','841662779436957697',
@@ -27,17 +25,14 @@ client.on('message', message => {
 	}
 })
 
-client.on('message', message => {
-	if (message.content === '!查詢CLO') {
-message.react(bean.id);
-	}
-});
+
 
 client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
     const { message, emoji } = messageReaction;
 
     if(emoji.id === "841661109868953651") 
+    message.deliete()
     message.channel.send('[영롱한 주얼 컴포넌트]');
 
     if(emoji.id === "841661110440034334") 
