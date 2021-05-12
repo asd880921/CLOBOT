@@ -32,7 +32,8 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     const { message, emoji } = messageReaction;
 
     if(message.author.id == "841613698908684308"){
-        message.delete()
+console.log('111')
+        message.channel.delete()
     }
 
     if(emoji.id === "841661109868953651")
