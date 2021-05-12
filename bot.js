@@ -1,10 +1,25 @@
 const {Client, RichEmbed, Discord} = require('discord.js') ;
 const client = new Client ;
 const {token} = require('./settings.json') ;
+
+var CLO_Emoji=[
+'841661109868953651','841661110440034334',
+'841662235410432011','841662779436957697'
+];
+
+var length = CLO_Emoji.length;
     
 client.on('ready', () => {
     console.log(`${client.user.tag} 準備好上戰場惹！`);
 });
+
+client.on('message', message => {
+	if (message.content === '!查詢CLO') {
+        for (var i = 0; i < length; i++) {
+        message.react(CLO_Emoji[i]);
+}
+	}
+})
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
