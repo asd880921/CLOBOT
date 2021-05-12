@@ -2,7 +2,7 @@ const {Client, RichEmbed, Discord} = require('discord.js') ;
 const client = new Client ;
 const {token} = require('./settings.json') ;
 
-var bean = message.guild.emojis.cache.find(emoji => emoji.name == '111');
+var bean = message.guild.emojis.find(emoji => emoji.name == '111');
 
 var CLO_Emoji=[
 '841661109868953651','841661110440034334',
