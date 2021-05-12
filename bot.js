@@ -32,7 +32,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     const { message, emoji } = messageReaction;
 
     if(emoji.id === "841661109868953651") 
-    message.deliete()
+    message.delete()
     message.channel.send('[영롱한 주얼 컴포넌트]');
 
     if(emoji.id === "841661110440034334") 
