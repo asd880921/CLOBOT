@@ -17,6 +17,12 @@ client.on('ready', () => {
     console.log(`${client.user.tag} 準備好上戰場惹！～`);
 });
 
+client.on('message',msg=>{
+	if(msg.content.startsWith(''+'羽櫻好醜')){
+		message.react('841661109868953651');
+	}
+}) ;
+
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
