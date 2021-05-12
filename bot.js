@@ -15,6 +15,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === '!查詢CLO') {
+console.log(sure)
         for (var i = 0; i < length; i++) {
         message.react(CLO_Emoji[i]);
 }
