@@ -18,8 +18,8 @@ client.on('ready', () => {
 });
 
 client.on('message',msg=>{
-	if(msg.content.startsWith('羽櫻好醜')){
-		message.react('841661109868953651');
+	if(msg.content.startsWith(''+'羽櫻好醜')){
+		msg.react('841661109868953651');
 	}
 }) ;
 
