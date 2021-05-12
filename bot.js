@@ -31,9 +31,9 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
     const { message, emoji } = messageReaction;
 
-    if(emoji.id === "841661109868953651") 
+    if(emoji.id === "841661109868953651") ｛
     message.delete()
-    message.channel.send('[영롱한 주얼 컴포넌트]');
+    message.channel.send('[영롱한 주얼 컴포넌트]');｝
 
     if(emoji.id === "841661110440034334") 
     message.channel.send('[초월의 비약]');
