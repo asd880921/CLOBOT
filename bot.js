@@ -32,7 +32,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
-        message.channrl.send(CLO_embed)
+        message.channel.send(CLO_embed)
     }
     if(message.embeds = CLO_embed && message.author.bot){
         for (var i = 0; i < length; i++) {
