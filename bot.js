@@ -4,7 +4,7 @@ const client = new Client ;
 const {token} = require('./settings.json') ;
 
 let CLO_embed = new Discordd.RichEmbed()
-.setTitle("[點選Emoji就能拿到名稱了哦~]")
+.setTitle("[點選Emoji就能拿到道具名稱了哦]")
 .setURL("https://closers.nexon.com/Main/Index")
 .setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
 .setColor("RANDOM")
