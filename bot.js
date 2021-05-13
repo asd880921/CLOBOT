@@ -3,7 +3,7 @@ const Discordd = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
 
-let CLO_embed = new Discordd.MessageEmbed()
+let CLO_embed = new Discordd.RichEmbed()
 .setTitle("[點選Emoji就能修改下方的文字視窗哦]")
 .setURL("https://closers.nexon.com/Main/Index")
 .setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
