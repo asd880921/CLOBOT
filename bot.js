@@ -32,8 +32,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
-        message.edit(CLO_embed).then(msg => msg.edit(CLO_embed.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
-        ,CLO_embed.setThumbnail("https://i.imgur.com/eJNvuBH.png"),CLO_embed.setTimestamp()))
+        message.channrl.send(CLO_embed)
     }
     if(message.embeds = CLO_embed && message.author.bot){
         for (var i = 0; i < length; i++) {
