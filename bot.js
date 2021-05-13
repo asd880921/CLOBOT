@@ -6,10 +6,10 @@ const {token} = require('./settings.json') ;
 let CLO_embed = new Discordd.RichEmbed()
 .setTitle("[點選Emoji就能修改下方的文字視窗哦]")
 .setURL("https://closers.nexon.com/Main/Index")
-.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
+.setDescription("```[翻譯-名稱會顯示在這邊哦]```")
 .setColor("RANDOM")
 .setTimestamp("2021-05-12T13:06:16.756Z")
-.setFooter("By Miisu | 要耐心等待一下哦，延遲比較重G_G","https://i.imgur.com/bqHT3Mp.png")
+.setFooter("By Miisu | 要耐心等待一下，延遲比較重G_G","https://i.imgur.com/bqHT3Mp.png")
 .setThumbnail("https://i.imgur.com/eJNvuBH.png")
 .setAuthor("封印者道具翻譯","https://i.imgur.com/5yOdbez.png","https://closers.nexon.com/Main/Index")
 
