@@ -4,12 +4,12 @@ const client = new Client ;
 const {token} = require('./settings.json') ;
 
 let CLO_embed = new Discordd.RichEmbed()
-.setTitle("[點選Emoji即可顯示道具名稱]")
+.setTitle("[點選Emoji就能修改下方的文字視窗哦]")
 .setURL("https://closers.nexon.com/Main/Index")
-.setDescription("```[翻譯-道具名稱會顯示在這邊哦]```")
+.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
 .setColor("RANDOM")
 .setTimestamp()
-.setFooter("By Miisu | 要耐心等待一下，延遲比較重G_G","https://i.imgur.com/bqHT3Mp.png")
+.setFooter("By Miisu | 要耐心等待一下哦，延遲比較重G_G","https://i.imgur.com/bqHT3Mp.png")
 .setThumbnail("https://i.imgur.com/eJNvuBH.png")
 .setAuthor("封印者道具翻譯","https://i.imgur.com/5yOdbez.png","https://closers.nexon.com/Main/Index")
 
@@ -32,7 +32,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
-        message.channel.send(CLO_embed)
+        message.channel.send(CLO_embed).then(msg => msg.edit(CLO_embed.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
+        ,CLO_embed.setThumbnail("https://i.imgur.com/eJNvuBH.png"),CLO_embed.setTimestamp()))
     }
     if(message.embeds = CLO_embed && message.author.bot){
         for (var i = 0; i < length; i++) {
@@ -56,68 +57,68 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     const { message, emoji} = messageReaction;
 
     message.edit().then(msg=>{
-        msg.edit(CLO_embed.setDescription("```[加載中Loading....]```"))
+        msg.edit(CLO_embed.setDescription("```[加載中Loading....]```"),CLO_embed.setThumbnail("https://i.imgur.com/eJNvuBH.png"),CLO_embed.setTimestamp())
     })
 
     switch(emoji.id){
         case '841661109868953651':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[영롱한 주얼 컴포넌트]```"))
+                msg.edit(CLO_embed.setDescription("```[영롱한 주얼 컴포넌트]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841661109868953651.png"))
             })
             break;
         case '841661110440034334':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[초월의 비약]```"))
+                msg.edit(CLO_embed.setDescription("```[초월의 비약]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841661110440034334.png"))
             })
             break;
         case '841662779436957697':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[일반 D 컴포넌트 : 기어]```"))
+                msg.edit(CLO_embed.setDescription("```[일반 D 컴포넌트 : 기어]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841662779436957697.png"))
             })
             break;
         case '841663111878017084':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[일반 D 컴포넌트 : 코스튬]```"))
+                msg.edit(CLO_embed.setDescription("```[일반 D 컴포넌트 : 코스튬]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841663111878017084.png"))
             })
             break;
         case '841663779212230657':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[품질 보증 씰]```"))
+                msg.edit(CLO_embed.setDescription("```[품질 보증 씰]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841663779212230657.png"))
             })
             break;
         case '841662235410432011':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[슬롯 타입 변경툴]```"))
+                msg.edit(CLO_embed.setDescription("```[슬롯 타입 변경툴]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841662235410432011.png"))
             })
             break;
         case '841663477433106442':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[리얼 플래티넘 드라이버]```"))
+                msg.edit(CLO_embed.setDescription("```[리얼 플래티넘 드라이버]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841663477433106442.png"))
             })
             break;
         case '841662530849472542':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[일반 강화기 연료]```"))
+                msg.edit(CLO_embed.setDescription("```[일반 강화기 연료]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841662530849472542.png"))
             })
             break;
         case '841663297571913748':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[완벽한 PNA 진화 키트]```"))
+                msg.edit(CLO_embed.setDescription("```[완벽한 PNA 진화 키트]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841663297571913748.png"))
             })
             break;
         case '841662438449741897':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[유니온 기어 윤활제]```"))
+                msg.edit(CLO_embed.setDescription("```[유니온 기어 윤활제]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841662438449741897.png"))
             })
             break;
         case '841662339409641552':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[알파 이퀄라이저(Lv.81~90)]```"))
+                msg.edit(CLO_embed.setDescription("```[알파 이퀄라이저(Lv.81~90)]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841662339409641552.png"))
             })
             break;
         case '841663979914526761':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[유니온 네임택]```"))
+                msg.edit(CLO_embed.setDescription("```[유니온 네임택]```"),CLO_embed.setThumbnail("https://cdn.discordapp.com/emojis/841663979914526761.png"))
             })
             break;
     }
