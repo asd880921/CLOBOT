@@ -31,7 +31,7 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-	if (message.content === '!查詢1') {
+	if (message.content === '!查詢') {
         message.delete(1)
         message.channel.send(CLO_embed)
     }
