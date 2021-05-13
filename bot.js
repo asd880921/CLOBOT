@@ -20,7 +20,9 @@ var CLO_Emoji=[
 '841663111878017084','841663779212230657',
 '841662530849472542','841663477433106442',
 '841663297571913748','841662438449741897',
-'841662339409641552','841663979914526761'
+'841662339409641552','841663979914526761',
+'842371663994814465','842371760858071050',
+'842371471161819156'
 ];
 
 var length = CLO_Emoji.length;
@@ -119,6 +121,22 @@ client.on('messageReactionAdd', (messageReaction, user) => {
         case '841663979914526761':
             message.edit().then(msg=>{
                 msg.edit(CLO_embed.setDescription("```[유니온 네임택]```").setThumbnail("https://cdn.discordapp.com/emojis/841663979914526761.png"))
+            })
+            break;
+	case '842371663994814465':
+            message.edit().then(msg=>{
+                msg.edit(CLO_embed.setDescription("```[솔로몬 싱크로 섬유]```").setThumbnail("https://cdn.discordapp.com/emojis/842371663994814465.png"))
+            })
+            break;
+            break;
+	case '842371760858071050':
+            message.edit().then(msg=>{
+                msg.edit(CLO_embed.setDescription("```[샤이닝 싱크로 섬유]```").setThumbnail("https://cdn.discordapp.com/emojis/842371760858071050.png"))
+            })
+            break;
+	case '842371471161819156':
+            message.edit().then(msg=>{
+                msg.edit(CLO_embed.setDescription("```[스킬 D 컴포넌트  기어]```").setThumbnail("https://cdn.discordapp.com/emojis/842371471161819156.png"))
             })
             break;
     }
