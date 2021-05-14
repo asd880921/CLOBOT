@@ -5,6 +5,8 @@ const {token} = require('./settings.json') ;
 var SetCount = 30;
 var _count = SetCount
 var BOT_Embed = false;
+var message_id;
+
 
 //字典
 var Item = require('./Item.json');
@@ -31,11 +33,13 @@ client.on('ready', () => {
 client.on('message', message => {
 	if (message.content === '!查詢') {
 	BOT_Embed = true
+	message_1 = 
         message.channel.send(CLO_embed).then(msg => msg.edit(CLO_embed.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
 	.setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp()))
     }
     if(BOT_Embed && message.author.bot){
 	BOT_Embed = false;
+	message_id = message.id;
         for (var i = 0; i < length; i++) {
         message.react(CLOEmoji_ID[i]);
         }
@@ -56,8 +60,8 @@ client.on('message',msg=>{
 
 client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
-
     const { message, emoji} = messageReaction;
+    if(!(message_id == message.id)) return;
 
 
     message.edit().then(msg=>{
