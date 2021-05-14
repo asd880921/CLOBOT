@@ -133,10 +133,10 @@
   "exports": {
     ".": [
       {
-        "require": "./src/bot.js",
+        "require": "./bot.js",
         "import": "./esm/discord.mjs"
       },
-      "./src/bot.js"
+      "./bot.js"
     ],
     "./esm": "./esm/discord.mjs"
   },
