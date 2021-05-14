@@ -65,7 +65,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 
     const { message, emoji} = messageReaction;
 	
-reaction.message.reactions.removeAll();
+messageReaction.message.reactions.removeAll();
 	
     _count++
 	
