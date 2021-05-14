@@ -3,6 +3,7 @@ const Discordd = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
 var _count = 0;
+var BOT_Embed = false;
 
 let CLO_embed = new Discordd.RichEmbed()
 .setTitle("[點選Emoji就能拿到道具名稱了哦]")
@@ -35,10 +36,12 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.content === '!查詢') {
+	BOT_Embed = true
         message.channel.send(CLO_embed).then(msg => msg.edit(CLO_embed.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
 	.setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp()))
     }
-    if(message.embeds = CLO_embed && message.author.bot){
+    if(BOT_Embed && message.author.bot){
+	BOT_Embed = false;
         for (var i = 0; i < length; i++) {
         message.react(CLO_Emoji[i]);
         }
