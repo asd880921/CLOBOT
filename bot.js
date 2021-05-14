@@ -2,7 +2,8 @@ const {Client, RichEmbed} = require('discord.js') ;
 const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
-var _count = 0;
+var SetCount = 1;
+var _count = SetCount
 var BOT_Embed = false;
 
 let CLO_embed = new Discord.MessageEmbed()
@@ -24,7 +25,7 @@ var CLO_Emoji=[
 '841662438449741897','841663979914526761',
 '842371663994814465','842371760858071050',
 '842633204058161162','842632313620004885',
-'842371471161819156'
+'842371471161819156','842757425739333683'
 ];
 
 var length = CLO_Emoji.length;
@@ -161,6 +162,12 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 		    _count++
             message.edit().then(msg=>{
                 msg.edit(CLO_embed.setDescription("```[스킬 D 컴포넌트  기어]```").setThumbnail("https://cdn.discordapp.com/emojis/842371471161819156.png"))
+            })
+            break;
+		case '842757425739333683':
+		    _count++
+            message.edit().then(msg=>{
+                msg.edit(CLO_embed.setDescription("```[你按這個是要衝3小]```").setThumbnail("https://cdn.discordapp.com/emojis/842757425739333683.png"))
             })
             break;
     }
