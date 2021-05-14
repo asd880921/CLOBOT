@@ -167,7 +167,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 		default:
 		    _count++
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```<@"+user.id+">你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+                msg.edit(CLO_embed.setDescription("<@"+user.id+">"+"```你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
             })
             break;
     }
