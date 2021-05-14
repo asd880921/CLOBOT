@@ -64,9 +64,11 @@ client.on('messageReactionAdd', (messageReaction, user) => {
     if(user.bot)  return;
 
     const { message, emoji} = messageReaction;
+	
+message.reactions.resolve(emoji.id).users.remove(user.id).catch(err => {})
+	
     _count++
 	
-    message.reactions.resolve(emoji.id).users.remove(user.id).catch(err => {})
 	
     message.edit().then(msg=>{
         msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
