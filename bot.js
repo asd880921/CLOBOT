@@ -1,5 +1,5 @@
-const {Client, RichEmbed, Discord} = require('discord.js') ;
-const Discordd = require('discord.js');
+const {Client, RichEmbed} = require('discord.js') ;
+const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
 var _count = 0;
