@@ -168,7 +168,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 		    _count++
 		    var Name=message.reactions.author.id;
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```<@"Name">你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+                msg.edit(CLO_embed.setDescription("```<@"+Name+">你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
             })
             break;
     }
