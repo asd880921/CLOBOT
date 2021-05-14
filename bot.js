@@ -2,7 +2,7 @@ const {Client, RichEmbed} = require('discord.js') ;
 const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
-var SetCount = 30;
+var SetCount = 28;
 var _count = SetCount
 var BOT_Embed = false;
 
@@ -167,7 +167,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 		default:
 		    _count++
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[你按這個是要衝3小]```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+                msg.edit(CLO_embed.setDescription("```<"user.name">你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
             })
             break;
     }
