@@ -2,8 +2,7 @@ const {Client, RichEmbed} = require('discord.js') ;
 const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
-var SetCount = 30;
-var _count = SetCount
+var _count = 58
 var BOT_Embed = false;
 var message_id;
 
