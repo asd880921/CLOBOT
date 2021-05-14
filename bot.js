@@ -164,10 +164,10 @@ client.on('messageReactionAdd', (messageReaction, user) => {
                 msg.edit(CLO_embed.setDescription("```[스킬 D 컴포넌트  기어]```").setThumbnail("https://cdn.discordapp.com/emojis/842371471161819156.png"))
             })
             break;
-		case '842757425739333683':
+		default:
 		    _count++
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[你按這個是要衝3小]```").setThumbnail("https://cdn.discordapp.com/emojis/842757425739333683.png"))
+                msg.edit(CLO_embed.setDescription("```[你按這個是要衝3小]```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
             })
             break;
     }
