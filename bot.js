@@ -19,9 +19,9 @@ var CLO_Emoji=[
 '841662235410432011','841662779436957697',
 '841663111878017084','841663779212230657',
 '841662530849472542','841663477433106442',
-'841663297571913748','841662438449741897',
-'841662339409641552','841663979914526761',
+'841662438449741897','841663979914526761',
 '842371663994814465','842371760858071050',
+'842633204058161162','842632313620004885',
 '842371471161819156'
 ];
 
@@ -103,19 +103,14 @@ client.on('messageReactionAdd', (messageReaction, user) => {
                 msg.edit(CLO_embed.setDescription("```[일반 강화기 연료]```").setThumbnail("https://cdn.discordapp.com/emojis/841662530849472542.png"))
             })
             break;
-        case '841663297571913748':
-            message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[완벽한 PNA 진화 키트]```").setThumbnail("https://cdn.discordapp.com/emojis/841663297571913748.png"))
-            })
-            break;
         case '841662438449741897':
             message.edit().then(msg=>{
                 msg.edit(CLO_embed.setDescription("```[유니온 기어 윤활제]```").setThumbnail("https://cdn.discordapp.com/emojis/841662438449741897.png"))
             })
             break;
-        case '841662339409641552':
+        case '842632313620004885':
             message.edit().then(msg=>{
-                msg.edit(CLO_embed.setDescription("```[알파 이퀄라이저(Lv.81~90)]```").setThumbnail("https://cdn.discordapp.com/emojis/841662339409641552.png"))
+                msg.edit(CLO_embed.setDescription("```[영롱한 주얼 이퀄라이저]```").setThumbnail("https://cdn.discordapp.com/emojis/842632313620004885.png"))
             })
             break;
         case '841663979914526761':
@@ -132,6 +127,11 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 	case '842371760858071050':
             message.edit().then(msg=>{
                 msg.edit(CLO_embed.setDescription("```[샤이닝 싱크로 섬유]```").setThumbnail("https://cdn.discordapp.com/emojis/842371760858071050.png"))
+            })
+            break;
+	case '842633204058161162':
+            message.edit().then(msg=>{
+                msg.edit(CLO_embed.setDescription("```[코스튬 퓨전 섬유]```").setThumbnail("https://cdn.discordapp.com/emojis/842633204058161162.png"))
             })
             break;
 	case '842371471161819156':
