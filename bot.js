@@ -5,7 +5,7 @@ const {token} = require('./settings.json') ;
 var _count = 0;
 var BOT_Embed = false;
 
-let CLO_embed = new Discordd.RichEmbed()
+let CLO_embed = new Discord.MessageEmbed()
 .setTitle("[點選Emoji就能拿到道具名稱了哦]")
 .setURL("https://closers.nexon.com/Main/Index")
 .setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
