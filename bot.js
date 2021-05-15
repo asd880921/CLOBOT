@@ -23,7 +23,16 @@ let CLO_embed = new Discord.MessageEmbed()
 .setThumbnail("https://i.imgur.com/eJNvuBH.png")
 .setAuthor("封印者道具翻譯","https://i.imgur.com/5yOdbez.png","https://closers.nexon.com/Main/Index")
 
-    
+var Meme_Emoji=[
+'802478923073585212','802488806192185373',
+'802478922641571850','803327608921260082',
+'773741506493153280','800773783933812778',
+'748953338841792542','800773783774298153',
+'802871289656115230','802478922872389653',
+'800773782041788467','828263463817314374'
+]  
+var Me_length = Meme_Emoji.length;
+
 client.on('ready', () => {
     console.log(`${client.user.tag} 準備好上戰場惹！～`);
 });
@@ -49,11 +58,11 @@ client.on('message', message => {
 })
 
 client.on('message',msg=>{
-	if(msg.content.startsWith('醜櫻') || msg.content.startsWith('羽櫻好醜')|| msg.content.startsWith('噁櫻')){
-		msg.react('802478923073585212');
-		msg.react('802488806192185373');
-		msg.react('802478922641571850');
-	}
+	if(msg.content.startsWith('醜櫻') || msg.content.startsWith('羽櫻好醜')|| msg.content.startsWith('噁櫻')|| msg.content.startsWith('負心漢')){
+	for (var i = 0; i < Me_length; i++) {
+	msg.react(Meme_Emoji[i]);
+        }
+    }
 }) ;
 
 
