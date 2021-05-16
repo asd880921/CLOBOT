@@ -2,7 +2,6 @@ const {Client, RichEmbed} = require('discord.js') ;
 const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
-var _count = 0
 var BOT_Embed = false;
 var message_id;
 
@@ -50,8 +49,8 @@ client.on('message', message => {
         message.react(CLOEmoji_ID[i]);
         }
     }
-	if(message.content === '!次數') {
-	message.channel.send('今天總共使用了'+_count+'次!')
+	if(message.content === '!test') {
+	message.channel.send('嗶嗶逼 我是機器人!')
 	}
 })
 
@@ -76,14 +75,12 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 
 
     if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
-        _count++
         message.edit().then(msg=>{
             msg.edit(CLO_embed.setDescription("```"+Item[emoji.id]+"```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
         })
     }
     else
     {
-        _count++
         message.edit().then(msg=>{
             msg.edit(CLO_embed.setDescription("<@"+user.id+">"+"```你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
         })
