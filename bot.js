@@ -2,7 +2,7 @@ const {Client, RichEmbed} = require('discord.js') ;
 const Discord = require('discord.js');
 const client = new Client ;
 const {token} = require('./settings.json') ;
-var _count = 99
+var _count = 0
 var BOT_Embed = false;
 var message_id;
 
@@ -51,7 +51,7 @@ client.on('message', message => {
         }
     }
 	if(message.content === '!次數') {
-	message.channel.send('總共被使用了'+_count+'次!')
+	message.channel.send('今天總共使用了'+_count+'次!')
 	}
 })
 
