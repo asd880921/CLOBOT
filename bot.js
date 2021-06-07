@@ -18,7 +18,7 @@ let CLO_embed = new Discord.MessageEmbed()
 .setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
 .setColor("RANDOM")
 .setTimestamp()
-.setFooter("By Miisu | 要耐心等待一下哦，延遲比較重G_G","https://i.imgur.com/bqHT3Mp.png")
+.setFooter("By Miisu | 要耐心等待一下哦，延遲比較重G_G","https://i.imgur.com/zNnxWMA.png")
 .setThumbnail("https://i.imgur.com/eJNvuBH.png")
 .setAuthor("封印者道具翻譯","https://i.imgur.com/5yOdbez.png","https://closers.nexon.com/Main/Index")
 
