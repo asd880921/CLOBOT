@@ -90,6 +90,8 @@ try{
 
 }catch(e){
 	
+}finally {
+    
 }
 
 client.login(process.env.BOT_TOKEN) ;
