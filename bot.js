@@ -70,7 +70,7 @@ client.on('messageReactionAdd', (messageReaction, user) => {
 
 
     message.edit().then(msg=>{
-        msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
+        //msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
     })
 
     if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
