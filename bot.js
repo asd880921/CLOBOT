@@ -69,7 +69,7 @@ client.on('messageReactionAdd',(messageReaction, user) => {
     if(!(message_id == message.id)) return;
 
 
-    message.channel.edit().then(msg=>{
+    message.channel.send().then(msg=>{
        msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
     })
 
