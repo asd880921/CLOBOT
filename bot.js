@@ -73,17 +73,17 @@ client.on('messageReactionAdd',(messageReaction, user) => {
        msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
     })
 
-    //if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
-        //message.edit().then(msg=>{
-           //msg.edit(CLO_embed.setDescription("```"+Item[emoji.id]+"```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
-        //})
-    //}
-    //else
-    //{
-        //message.edit().then(msg=>{
-           //msg.edit(CLO_embed.setDescription("<@"+user.id+">"+"```你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
-        //})
-    //}
+    if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
+        message.edit(CLO_embed).then(msg=>{
+           msg.edit(CLO_embed.setDescription("```"+Item[emoji.id]+"```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+        })
+    }
+    else
+    {
+        message.edit(CLO_embed).then(msg=>{
+           msg.edit(CLO_embed.setDescription("<@"+user.id+">"+"```你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+        })
+    }
 });
 
 
