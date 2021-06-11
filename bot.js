@@ -69,9 +69,9 @@ client.on('messageReactionAdd',(messageReaction, user) => {
     if(!(message_id == message.id)) return;
 
 
-    //message.edit().then(msg=>{
-       //msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
-   // })
+    message.edit().then(msg=>{
+       msg.edit(CLO_embed.setDescription("```[加載中Loading....]```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
+    })
 
     //if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
         //message.edit().then(msg=>{
