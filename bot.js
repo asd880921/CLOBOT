@@ -63,7 +63,7 @@ client.on('message',msg=>{
 }) ;
 
 client.on('message',msg=>{
-	if(msg.includes('星爆')){
+	if(msg.content.includes('星爆')){
 	msg.react('802488806192185373');
 	}
 }
