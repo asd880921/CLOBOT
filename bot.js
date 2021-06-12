@@ -60,22 +60,17 @@ client.on('message',msg=>{
 	msg.react(Meme_Emoji[i]);
         }
     }
-}) ;
-
-client.on('message',msg=>{
 	if(msg.content.includes('羽櫻') && msg.content.includes('醜')){
 	for (var i = 0; i < Me_length; i++) {
 	msg.react(Meme_Emoji[i]);
         }
     }
-}) ;
-
-client.on('message',msg=>{
 	if(msg.content.includes('星爆')){
 	msg.react('853276975463923752');
 	msg.react('853276990327750686');
 	}
-});
+}) ;
+
 
 client.on('messageReactionAdd',(messageReaction, user) => {
     if(user.bot)  return;
