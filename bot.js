@@ -64,7 +64,7 @@ client.on('message',msg=>{
 
 client.on('message',msg=>{
 	if(msg.content.includes('星爆')){
-	msg.react('828263463817314374');
+	msg.react('841663297571913748');
 	}
 });
 
