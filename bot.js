@@ -55,7 +55,15 @@ client.on('message', message => {
 })
 
 client.on('message',msg=>{
-	if(msg.content.startsWith('醜櫻') || msg.content.startsWith('羽櫻好醜')|| msg.content.startsWith('噁櫻')|| msg.content.startsWith('負心漢')){
+	if(msg.content.includes('醜櫻') || msg.content.includes('噁櫻')|| msg.content.includes('負心漢')){
+	for (var i = 0; i < Me_length; i++) {
+	msg.react(Meme_Emoji[i]);
+        }
+    }
+}) ;
+
+client.on('message',msg=>{
+	if(msg.content.includes('羽櫻') && msg.content.includes('醜')){
 	for (var i = 0; i < Me_length; i++) {
 	msg.react(Meme_Emoji[i]);
         }
