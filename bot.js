@@ -62,10 +62,6 @@ client.on('message',msg=>{
     }
 }) ;
 
-client.on('message',msg=>{
-	if(msg.content.includes('星爆')){
-	msg.react('802488806192185373');
-	}
 
 client.on('messageReactionAdd',(messageReaction, user) => {
     if(user.bot)  return;
