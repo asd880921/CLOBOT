@@ -57,14 +57,14 @@ client.on('message', message => {
 client.on('message',msg=>{
 	if(msg.content.startsWith('醜櫻') || msg.content.startsWith('羽櫻好醜')|| msg.content.startsWith('噁櫻')|| msg.content.startsWith('負心漢')){
 	for (var i = 0; i < Me_length; i++) {
-	msg.react('828263463817314374');
+	msg.react(Meme_Emoji[i]);
         }
     }
 }) ;
 
 client.on('message',msg=>{
 	if(msg.content.includes('星爆')){
-	msg.react(Meme_Emoji[i]);
+	msg.react('828263463817314374');
 	}
 });
 
