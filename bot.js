@@ -64,7 +64,8 @@ client.on('message',msg=>{
 
 client.on('message',msg=>{
 	if(msg.content.includes('星爆')){
-	msg.react('802488806192185373');
+	msg.react(Meme_Emoji[i]);
+	}
 });
 
 client.on('messageReactionAdd',(messageReaction, user) => {
