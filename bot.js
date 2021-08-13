@@ -65,12 +65,7 @@ client.on('message',msg=>{
 }) ;
 
 client.on('message',msg=>{
-	key_word.forEach(x => 
-					if(msg.content.includes(key_word[i].key)){
-		   	for (var i = 0; i < Me_length; i++) {
-			msg.react(Meme_Emoji[i]);
-		}
-	});
+	key_word.forEach(x => console(x));
 });
 
 
