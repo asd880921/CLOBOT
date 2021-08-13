@@ -11,6 +11,9 @@ var Item = require('./Item.json');
 var CLOEmoji_ID =Object.keys(Item);
 var length = CLOEmoji_ID.length;
 
+//關鍵詞
+var key_word = require('./key_word.json');
+
 
 let CLO_embed = new Discord.MessageEmbed()
 .setTitle("[點選Emoji就能拿到道具名稱了哦]")
@@ -55,20 +58,20 @@ client.on('message', message => {
 })
 
 client.on('message',msg=>{
-	if(msg.content.includes('醜櫻') || msg.content.includes('噁櫻')|| msg.content.includes('負心')){
-	for (var i = 0; i < Me_length; i++) {
-	msg.react(Meme_Emoji[i]);
-        }
-    }
-	if(msg.content.includes('羽櫻') && msg.content.includes('醜')){
-	for (var i = 0; i < Me_length; i++) {
-	msg.react(Meme_Emoji[i]);
-        }
-    }
 	if(msg.content.includes('星爆')){
 	msg.react('853276975463923752');
 	msg.react('853276990327750686');
 	}
+}) ;
+
+client.on('message',msg=>{
+	for (var i in key_word){
+		if((msg.content.includes(key_word[i])){
+		   	for (var i = 0; i < Me_length; i++) {
+			msg.react(Meme_Emoji[i]);
+		}
+	}
+}
 }) ;
 
 
