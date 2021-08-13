@@ -91,7 +91,7 @@ client.on('message',msg=>{
 	}
 	
 	if(msg.content.includes('!key')){
-		msg.delete(1000).catch(() => {});
+		msg.channel.bulkDelete(msg);
 	}
 });
 
