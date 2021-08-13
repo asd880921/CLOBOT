@@ -12,7 +12,7 @@ var CLOEmoji_ID =Object.keys(Item);
 var length = CLOEmoji_ID.length;
 
 //關鍵詞
-var key_word = require('./key_word.json');
+//var key_word = require('./key_word.json');
 
 let CLO_embed = new Discord.MessageEmbed()
 .setTitle("[點選Emoji就能拿到道具名稱了哦]")
@@ -67,6 +67,7 @@ client.on('message',msg=>{
 	}
 });
 
+/*
 //把關鍵字寫入key_word.JSON
 var fs = require('fs');
 
@@ -93,7 +94,7 @@ client.on('message',msg=>{
 		})
 	}	
 });
-
+*/
 
 client.on('messageReactionAdd',(messageReaction, user) => {
     if(user.bot)  return;
