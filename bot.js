@@ -13,7 +13,6 @@ var length = CLOEmoji_ID.length;
 
 //關鍵詞
 var key_word = require('./key_word.json');
-var word =Object.keys(key_word);
 
 let CLO_embed = new Discord.MessageEmbed()
 .setTitle("[點選Emoji就能拿到道具名稱了哦]")
@@ -25,13 +24,6 @@ let CLO_embed = new Discord.MessageEmbed()
 .setThumbnail("https://i.imgur.com/eJNvuBH.png")
 .setAuthor("封印者道具翻譯","https://i.imgur.com/5yOdbez.png","https://closers.nexon.com/Main/Index")
 
-var Meme_Emoji=[
-'802478923073585212','802488806192185373',
-'802478922641571850','800773783774298153',
-'748953338841792542','802478922872389653',
-'800773782041788467','828263463817314374'
-]  
-var Me_length = Meme_Emoji.length;
 
 client.on('ready', () => {
     console.log(`${client.user.tag} 準備好上戰場惹！～`);
@@ -68,8 +60,8 @@ client.on('message',msg=>{
 	for (var i = 0; i< key_word.key.length;i++){
 		if(msg.content.includes(key_word.key[i]))
 		{
-			for (var i = 0; i < Me_length; i++) {
-				msg.react(Meme_Emoji[i]);
+			for (var j = 0; i < key_word.emoji.length; i++) {
+				msg.react(key_word.emoji[j]);
 			}
 		}
 	}
