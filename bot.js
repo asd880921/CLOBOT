@@ -56,6 +56,7 @@ client.on('message',msg=>{
 	}
 }) ;
 
+/*
 client.on('message',msg=>{
 	for (var i = 0; i< key_word.key.length;i++){
 		if(msg.content.includes(key_word.key[i]))
@@ -67,7 +68,7 @@ client.on('message',msg=>{
 	}
 });
 
-/*
+
 //把關鍵字寫入key_word.JSON
 var fs = require('fs');
 
