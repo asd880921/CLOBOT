@@ -65,13 +65,13 @@ client.on('message',msg=>{
 }) ;
 
 client.on('message',msg=>{
-	array.forEach(x => 
-		     		if(msg.content.includes(key_word.key[x])){
+	key_word.forEach(x => 
+					if(msg.content.includes(key_word[i].key)){
 		   	for (var i = 0; i < Me_length; i++) {
 			msg.react(Meme_Emoji[i]);
 		}
-	})
-}) ;
+	});
+});
 
 
 client.on('messageReactionAdd',(messageReaction, user) => {
