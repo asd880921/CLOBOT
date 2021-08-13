@@ -60,7 +60,7 @@ client.on('message',msg=>{
 	for (var i = 0; i< key_word.key.length;i++){
 		if(msg.content.includes(key_word.key[i]))
 		{
-			for (var j = 0; i < key_word.emoji.length; i++) {
+			for (var j = 0; j < key_word.emoji.length; j++) {
 				msg.react(key_word.emoji[j]);
 			}
 		}
