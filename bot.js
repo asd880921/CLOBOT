@@ -71,6 +71,8 @@ client.on('message',msg=>{
 var fs = require('fs');
 
 client.on('message',msg=>{
+	if(!(msg.content === '!key'))
+	{
 	if(msg.content.includes('!key')){
 		var str = msg.content;
 		key_word.key.push(str.substring(4,100));
@@ -78,6 +80,7 @@ client.on('message',msg=>{
 		fs.writeFile("./key_word.json",result,function (error) {
 			console.log(error);
 		})
+	}
 	}
 	//清除
 		if(msg.content.includes('!delete')){
@@ -88,11 +91,7 @@ client.on('message',msg=>{
 		fs.writeFile("./key_word.json",result,function (error) {
 			console.log(error);
 		})
-	}
-	
-	if(msg.content.includes('!key')){
-		msg.channel.bulkDelete(1);
-	}
+	}	
 });
 
 
