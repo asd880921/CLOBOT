@@ -89,6 +89,10 @@ client.on('message',msg=>{
 			console.log(error);
 		})
 	}
+	
+	if(msg.content.includes('!key')){
+		msg.channel.delete();
+	}
 });
 
 
