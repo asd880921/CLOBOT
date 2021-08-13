@@ -68,6 +68,8 @@ client.on('message',msg=>{
 });
 
 //把關鍵字寫入key_word.JSON
+var fs = require('fs');
+
 client.on('message',msg=>{
 	if(msg.content.includes('!key@')){
 		var str = msg.content;
