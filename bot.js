@@ -73,8 +73,8 @@ client.on('message',msg=>{
 	if(msg.content.includes('!add(key)@')){
 	strmsg = strkey_word.key.push(msg.substring(10, 100));
 	var result = JSON.stringify(strkey_word);
-}
-}
+	}
+});
 
 
 client.on('messageReactionAdd',(messageReaction, user) => {
