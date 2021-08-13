@@ -68,10 +68,9 @@ client.on('message',msg=>{
 });
 
 //把關鍵字寫入key_word.JSON
-var strmsg = "";
 client.on('message',msg=>{
 	if(msg.content.includes('!add(key)@')){
-	strmsg = strkey_word.key.push(msg.substring(10, 100));
+	key_word.key.push(msg.substring(10, 100));
 	var result = JSON.stringify(strkey_word);
 	}
 });
