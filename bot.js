@@ -91,7 +91,7 @@ client.on('message',msg=>{
 	}
 	
 	if(msg.content.includes('!key')){
-		msg.delete().catch(() => {});
+		msg.delete({ timeout: 500 /*time unitl delete in milliseconds*/});
 	}
 });
 
