@@ -65,7 +65,14 @@ client.on('message',msg=>{
 }) ;
 
 client.on('message',msg=>{
-	console.log(key_word.key.length);
+	for (var i = 0; i< key_word.key.length;i++){
+		if(msg.content.includes(key_word.key[i]))
+		{
+			for (var i = 0; i < Me_length; i++) {
+				msg.react(Meme_Emoji[i]);
+			}
+		}
+	}
 });
 
 
