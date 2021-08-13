@@ -70,7 +70,7 @@ client.on('message',msg=>{
 		   	for (var i = 0; i < Me_length; i++) {
 			msg.react(Meme_Emoji[i]);
 		}
-	});
+	})
 }) ;
 
 
