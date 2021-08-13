@@ -91,7 +91,7 @@ client.on('message',msg=>{
 	}
 	
 	if(msg.content.includes('!key')){
-		msg.delete();
+		msg.delete(1000);
 	}
 });
 
