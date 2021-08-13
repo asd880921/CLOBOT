@@ -79,6 +79,16 @@ client.on('message',msg=>{
 			console.log(error);
 		})
 	}
+	//清除
+		if(msg.content.includes('!delete')){
+		var str = msg.content;
+		var del = [];
+		key_word.key = del;
+		var result = JSON.stringify(key_word);
+		fs.writeFile("./key_word.json",result,function (error) {
+			console.log(error);
+		})
+	}
 });
 
 
