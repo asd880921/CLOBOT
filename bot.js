@@ -75,7 +75,9 @@ client.on('message',msg=>{
 		var str = msg.content;
 		key_word.key.push(str.substring(5,100));
 		var result = JSON.stringify(key_word);
-		fs.writeFile("./key_word.json",result,"utf8")
+		fs.writeFile("./key_word.json",result,function (error) {
+			console.log(error_add);
+		})
 	}
 });
 
