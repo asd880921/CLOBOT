@@ -65,7 +65,7 @@ client.on('message',msg=>{
 }) ;
 
 client.on('message',msg=>{
-	console(key_word[i].key.length);
+	console.log(key_word.key.length);
 });
 
 
