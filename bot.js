@@ -71,7 +71,7 @@ client.on('message',msg=>{
 client.on('message',msg=>{
 	if(msg.content.includes('!key@')){
 		var str = msg.content;
-		key_word.key.push(str.substring(, 100));
+		key_word.key.push(str.substring(6,100));
 		var result = JSON.stringify(key_word);
 		key_word.writeFile("./Item.json",result,"utf8")
 	}
