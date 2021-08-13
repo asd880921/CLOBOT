@@ -70,8 +70,9 @@ client.on('message',msg=>{
 //把關鍵字寫入key_word.JSON
 client.on('message',msg=>{
 	if(msg.content.includes('!add(key)@')){
-	key_word.key.push(msg.substring(10, 100));
-	var result = JSON.stringify(strkey_word);
+		var str = msg.content;
+		key_word.key.push(str.substring(10, 100));
+		var result = JSON.stringify(strkey_word);
 	}
 });
 
