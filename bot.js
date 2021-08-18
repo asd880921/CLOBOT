@@ -17,7 +17,7 @@ var length = CLOEmoji_ID.length;
 let CLO_embed = new Discord.MessageEmbed()
 .setTitle("[點選Emoji就能拿到道具名稱了哦]")
 .setURL("https://closers.nexon.com/Main/Index")
-.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
+.setDescription("```ini\n[翻譯列表-道具名稱會顯示在這邊哦]\n```")
 .setColor("RANDOM")
 .setTimestamp()
 .setFooter("By Miisu | 要耐心等待一下哦，延遲比較重G_G","https://i.imgur.com/zNnxWMA.png")
@@ -109,13 +109,13 @@ client.on('messageReactionAdd',(messageReaction, user) => {
 
     if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
         message.edit(CLO_embed).then(msg=>{
-           msg.edit(CLO_embed.setDescription("```"+Item[emoji.id]+"```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+           msg.edit(CLO_embed.setDescription("```yaml\n"+Item[emoji.id]+"\n```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
         })
     }
     else
     {
         message.edit(CLO_embed).then(msg=>{
-           msg.edit(CLO_embed.setDescription("<@"+user.id+">"+"```你按這個是要衝3小```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
+           msg.edit(CLO_embed.setDescription("<@"+user.id+">"+"```fix\n你按這個是要衝3小\n```").setThumbnail("https://cdn.discordapp.com/emojis/"+emoji.id+".png"))
         })
     }
 });
