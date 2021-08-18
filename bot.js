@@ -34,7 +34,7 @@ client.on('message', message => {
 	if (message.content === '!查詢') {
 	BOT_Embed = true
 	message_1 = 
-        message.channel.send(CLO_embed).then(msg => msg.edit(CLO_embed.setDescription("```[翻譯列表-道具名稱會顯示在這邊哦]```")
+        message.channel.send(CLO_embed).then(msg => msg.edit(CLO_embed.setDescription("```ini\n[翻譯列表-道具名稱會顯示在這邊哦]\n```")
 	.setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp()))
     }
     if(BOT_Embed && message.author.bot){
@@ -104,7 +104,7 @@ client.on('messageReactionAdd',(messageReaction, user) => {
 
 
     message.edit(CLO_embed).then(msg=>{
-       msg.edit(CLO_embed.setDescription("```diff\n-[加載中Loading....]-\n```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
+       msg.edit(CLO_embed.setDescription("```diff\n-加載中Loading....-\n```").setThumbnail("https://i.imgur.com/eJNvuBH.png").setTimestamp())
     })
 
     if(Item.hasOwnProperty(emoji.id) && !(emoji.id == "842757425739333683")){
